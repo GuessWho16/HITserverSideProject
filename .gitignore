@@ -1,0 +1,54 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+
+# macOS/Linux/Windows
+*.swp
+*.swo
+*.bak
+*~
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# VS Code
+.vscode/
+.history/
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Tests
+coverage/
+.nyc_output/
+
+# Git
+.git/
+
+# IDEs and editors
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# Compiled files
+*.out
+*.class
+*.o
+*.so
+*.exe
+
+# Others (adjust to your stack)
+.env.local
+.env.development
+.env.production
+*.local
