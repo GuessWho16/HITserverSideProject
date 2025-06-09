@@ -1,0 +1,35 @@
+http://localhost:3000
+
+testing getting the about
+-------------------------
+url=http://localhost:3000/api/about/
+data.status_code=200
+b'[{"first_name":"Noy","last_name":"Klar"},{"first_name":"Daniel","last_name":"Podolsky"}]'
+data.text=[{"first_name":"Noy","last_name":"Klar"},{"first_name":"Daniel","last_name":"Podolsky"}]
+[{'first_name': 'Noy', 'last_name': 'Klar'}, {'first_name': 'Daniel', 'last_name': 'Podolsky'}]
+
+
+testing getting the report - 1
+------------------------------
+url=http://localhost:3000/api/report/?id=123123&year=2025&month=6
+data.status_code=200
+b'{"userid":123123,"year":2025,"month":6,"costs":{"food":[],"health":[],"housing":[],"sport":[],"education":[]}}'
+data.text={"userid":123123,"year":2025,"month":6,"costs":{"food":[],"health":[],"housing":[],"sport":[],"education":[]}}
+
+
+
+testing adding cost item
+----------------------------------
+url=http://localhost:3000/api/add/
+data.status_code=201
+b'{"message":"Cost item created successfully","cost":{"description":"milk 9","category":"food","userid":123123,"sum":8,"created_at":"2025-06-09T12:04:05.887Z","_id":"6846cdb52184eecc7603bff2"}}'
+
+
+testing getting the report - 2
+------------------------------
+url=http://localhost:3000/api/report/?id=123123&year=2025&month=6
+data.status_code=200
+b'{"userid":123123,"year":2025,"month":6,"costs":{"food":[{"sum":8,"day":9,"description":"milk 9"}],"health":[],"housing":[],"sport":[],"education":[]}}'
+data.text={"userid":123123,"year":2025,"month":6,"costs":{"food":[{"sum":8,"day":9,"description":"milk 9"}],"health":[],"housing":[],"sport":[],"education":[]}}
+
+
